@@ -24,3 +24,6 @@ namespace WebApplication9
                 });
     }
 }
+//Model => Manages the behavior and data
+// View => Manages the display of data
+//Controller => handles page events and navigation between pages
