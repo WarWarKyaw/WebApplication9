@@ -25,6 +25,18 @@ namespace WebApplication9.Controllers
             return View(await _context.WarWar.ToListAsync());
         }
 
+        // GET: WarWars/ShowSearchForm
+        public async Task<IActionResult> ShowSearchForm()
+        {
+            return View( );
+        }
+
+        // GET: WarWars/ShowSearchResults
+        public async Task<IActionResult> ShowSearchResults(String SearchPharse)
+        {
+            return View("Index",await _context.WarWar.Where(j => j.Question.Contains(SearchPharse)).ToListAsync());
+        }
+
         // GET: WarWars/Details/5
         public async Task<IActionResult> Details(int? id)
         {
